@@ -1,8 +1,11 @@
-<ion-view view-title="{{chat.name}}">
+<ion-view  view-title="Detalles de lugar">
   <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
+  <div ng-repeat="l in lugar">  	
+	<p ng-model="name">{{l.name}}</p>
+  </div>
+  <div ng-repeat="i in images">    	
+	<img src="{{i.url}}" alt="">
+  </div>  
   </ion-content>
 </ion-view>
+	

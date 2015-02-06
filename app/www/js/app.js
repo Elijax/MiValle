@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('MiValle', ['ionic'])
+var app = angular.module('MiValle', ['ionic','ngResource'])
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -53,7 +53,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     })
     .state('tab.place-detail', {
-      url: '/places/:placeId',
+      url: '/places/:id',
       views: {
         'tab-places': {
           templateUrl: 'templates/place-detail.html',
