@@ -1,12 +1,12 @@
-var app =  angular.module('starter.controllers', [])
+'use strict';
 
-app.controller('PlacesCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
+app.controller('PlacesCtrl', function($scope, Places) {
+  $scope.chats = Places.all();
   $scope.remove = function(chat) {
-    Chats.remove(chat);
+    Places.remove(chat);
   }
 })
 
-app.controller('PlaceDetailCtrl', function($scope, $stateParams, Chats) {
+app.controller('PlaceDetailCtrl', function($scope, $stateParams, Places) {
   $scope.chat = Chats.get($stateParams.chatId);
 });
